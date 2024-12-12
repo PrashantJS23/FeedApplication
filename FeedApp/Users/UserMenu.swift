@@ -24,11 +24,11 @@ struct UserMenu: View {
                             EmptyView()
                         }
                     } label: {
-                        HStack {
+                        HStack(spacing: 16) {
                             Image(systemName: Config.resource.menucardFill)
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: 40, height: 40, alignment: .leading)
+                                .frame(width: 40, height: 50, alignment: .leading)
+                                .aspectRatio(contentMode: .fit)
                                 .foregroundStyle(.white)
                             Text(item)
                                 .font(.headline)

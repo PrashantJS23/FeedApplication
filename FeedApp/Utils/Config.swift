@@ -21,6 +21,7 @@ struct Config {
         static let message = "message"
         static let squareAndArrowUp = "square.and.arrow.up"
         static let menucard = "menucard"
+        static let photoCircleFill = "photo.circle.fill"
     }
     
     struct navTitle {
@@ -30,6 +31,7 @@ struct Config {
         static let comment = "Comments"
         static let albums = "Albums"
         static let todos = "Todos"
+        static let photos = "Photos"
     }
     
     struct string {
