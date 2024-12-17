@@ -20,15 +20,17 @@ struct UserMenu: View {
                             PostView(viewModel: PostViewModel(service: PostService()), user: user)
                         case Config.string.albums:
                             AlbumView(viewModel: AlbumViewModel(service: AlbumService()))
+                        case Config.string.todos:
+                            TodoView(viewModel: TodoViewModel(service: TodoService()))
                         default:
                             EmptyView()
                         }
                     } label: {
-                        HStack {
+                        HStack(spacing: 16) {
                             Image(systemName: Config.resource.menucardFill)
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: 40, height: 40, alignment: .leading)
+                                .frame(width: 40, height: 50, alignment: .leading)
+                                .aspectRatio(contentMode: .fit)
                                 .foregroundStyle(.white)
                             Text(item)
                                 .font(.headline)

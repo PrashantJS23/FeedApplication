@@ -12,6 +12,8 @@ enum NetworkConfig {
     case posts
     case comments(Int)
     case albums
+    case photos
+    case todos
 }
 
 extension NetworkConfig: EndPoint {
@@ -25,6 +27,8 @@ extension NetworkConfig: EndPoint {
         case .posts: return "/posts"
         case .comments: return "/comments"
         case .albums: return "/albums"
+        case .photos: return "/photos"
+        case .todos: return "/todos"
         }
     }
     

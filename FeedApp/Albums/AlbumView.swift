@@ -15,7 +15,7 @@ struct AlbumView: View {
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(viewModel.albums ?? [], id: \.id) { album in
                     NavigationLink {
-                        EmptyView()
+                        PhotoView(viewModel: PhotoViewModel(service: PhotoService()), albumId: album.id)
                     } label: {
                         VStack(alignment: .center) {
                             Image(systemName: Config.resource.menucard)
@@ -36,7 +36,7 @@ struct AlbumView: View {
             }
         }
         .padding()
-        .onAppear{
+        .onAppear {
             viewModel.getAlbums()
         }
         .navigationTitle(Config.navTitle.albums)
