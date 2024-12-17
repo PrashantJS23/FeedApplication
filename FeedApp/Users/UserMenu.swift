@@ -20,6 +20,8 @@ struct UserMenu: View {
                             PostView(viewModel: PostViewModel(service: PostService()), user: user)
                         case Config.string.albums:
                             AlbumView(viewModel: AlbumViewModel(service: AlbumService()))
+                        case Config.string.todos:
+                            TodoView(viewModel: TodoViewModel(service: TodoService()))
                         default:
                             EmptyView()
                         }

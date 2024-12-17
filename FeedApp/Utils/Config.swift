@@ -22,6 +22,8 @@ struct Config {
         static let squareAndArrowUp = "square.and.arrow.up"
         static let menucard = "menucard"
         static let photoCircleFill = "photo.circle.fill"
+        static let checkmarkCircle = "checkmark.circle"
+        static let checkmarkCircleFill = "checkmark.circle.fill"
     }
     
     struct navTitle {
